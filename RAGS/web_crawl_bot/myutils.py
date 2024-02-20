@@ -111,7 +111,7 @@ def my_pipeline(task, model_name, tokenizer, vectorstore):
   # with additional model-specific arguments (temperature and max_length)
   llm = HuggingFacePipeline(
     pipeline=question_answerer,
-    model_kwargs={"temperature": 0.7, "max_length": 512},
+    model_kwargs={"temperature": 0.7, "max_length": 1024},
   )
   retriever = vectorstore.as_retriever(search_kwargs={"k": 4})
   qa = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=retriever, return_source_documents=False)

@@ -29,12 +29,14 @@ def get_answer(rag_prompt, quest):
     docs = vectorstore.similarity_search(quest)
     final_prompt = generate_final_prompt(docs, rag_prompt, quest)
     print("Information: Answer being generated...!")
-    answer = LLM(final_prompt)[0]["generated_text"]
-    print(" Answer new:", answer)
-    return answer
+    #answers = LLM(final_prompt)[0]["generated_text"]
+    answers = LLM(final_prompt)
+    return answers
 
-ans1 = get_answer(rag_prompt, instr_prompt)
+answers = get_answer(rag_prompt, instr_prompt)
+for i in range(len(answers)):
+    print("-----------------------------------------------")
+    print(" Answer :", answers[i]["generated_text"])
 #for pro in processsors:
 #  np = prompts[1].format(pro, processors)
 #  get_answer(rag_prompt, np)
-

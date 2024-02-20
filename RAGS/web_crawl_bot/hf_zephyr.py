@@ -7,6 +7,8 @@ READER_MODEL_NAME = "HuggingFaceH4/zephyr-7b-beta"
 def get_hf_zephyr_model(READER_MODEL_NAME):
   print("Information: Model loading please wait...!")
   model = AutoModelForCausalLM.from_pretrained(READER_MODEL_NAME)
+  if torch. cuda. is_available():
+      model = model.to('cuda:0')
   print("Information: Model loaded...!")
   tokenizer = AutoTokenizer.from_pretrained(READER_MODEL_NAME)
 
@@ -31,7 +33,7 @@ def build_prompt(tokenizer):
     {
         "role": "system",
         "content": """Using the information contained in the context,
-  give a comprehensive answer to the question.
+  give a comprehensive answer as a table to the question with data.
   Respond only to the question asked, response should be concise and relevant to the question.
   Provide the number of the source document when relevant.
   If the answer cannot be deduced from the context, do not give an answer.""",
