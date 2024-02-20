@@ -16,6 +16,7 @@ Instructions
         python run_prompt.py.
         ```
       You can specify a web link with -w option.
+   
    3.2 To run the web interface.
        ```
        python rag_ui.py.
