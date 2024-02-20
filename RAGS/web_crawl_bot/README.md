@@ -13,7 +13,7 @@ Instructions
 
    3.1 To run from directly in shell.
         ```
-        python run_prompt.py.
+        python rag_prompt.py.
         ```
       You can specify a web link with -w option.
    
