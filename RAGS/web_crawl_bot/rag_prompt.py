@@ -25,7 +25,7 @@ LLM,tokenizer = get_hf_zephyr_model(model_name)
 rag_prompt =build_prompt(tokenizer)
 
 def get_answer(rag_prompt, quest):
-    print("Query :", quest)
+    #print("Query :", quest)
     docs = vectorstore.similarity_search(quest)
     final_prompt = generate_final_prompt(docs, rag_prompt, quest)
     print("Information: Answer being generated...!")
