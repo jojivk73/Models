@@ -12,16 +12,21 @@ Instructions
 3. Run the RAG.
 
    3.1 To run from directly in shell.
-        >python run_prompt.py.
+        ```
+        python run_prompt.py.
+        ```
       You can specify a web link with -w option.
+
    3.2 To run the web interface.
-        >python rag_ui.py.
+       ```
+       python rag_ui.py.
+       ```
 
 Model used:
-  model_name = "HuggingFaceH4/zephyr-7b-beta"
+```  model_name = "HuggingFaceH4/zephyr-7b-beta"```
 
 You can change the model used with the shell execution.
- > python run_prompt.py --model mistralai/Mistral-7B-Instruct-v0.2 
+ ```> python run_prompt.py --model mistralai/Mistral-7B-Instruct-v0.2 ```
 
 Limitation:
 --------------------
