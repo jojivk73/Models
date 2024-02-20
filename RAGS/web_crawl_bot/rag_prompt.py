@@ -11,6 +11,7 @@ from constants_and_prompt import *
 parser = argparse.ArgumentParser('Intel RAG')
 parser.add_argument('-m', '--model', default=model_name, required=False) 
 parser.add_argument('-w', '--web_link', default=search_str, required=False) 
+parser.add_argument('-s', '--simple_prompt', default=True, required=False) 
 args = parser.parse_args()
 if args.model:
   model_name = args.model
@@ -33,7 +34,8 @@ def get_answer(rag_prompt, quest):
     answers = LLM(final_prompt)
     return answers
 
-answers = get_answer(rag_prompt, instr_prompt)
+loc_prompt = instr_prompt_simple if (args.simple_prompt) else instr_prompt
+answers = get_answer(rag_prompt, loc_prompt)
 for i in range(len(answers)):
     print("-----------------------------------------------")
     print(" Answer :", answers[i]["generated_text"])

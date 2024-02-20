@@ -34,3 +34,10 @@ instr_prompt= 'Do the following instructions step by step.' + \
 'Cinebench R24 - Single Core	CPU	Score	H	12			1039		121		152 \n'	 + \
 'Grand Bench 6.2 - Multi-core	CPU	Score	H	123			111		10222		12223 \n' 
 
+
+instr_prompt_simple= 'Do the following instructions step by step.' + \
+'Step 1. Find all the processors mentioned in the document.' + \
+'Step 2. For each processor compare its performance numbers with other processors in the document\n' + \
+'Step 3. Get the performance number for each processor for each benchmark :\n' + \
+'Step 4. Generate a table as below for processors and their performance numbers.\n'
+
