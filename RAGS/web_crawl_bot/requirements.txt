@@ -1,0 +1,15 @@
+gpt4all
+bs4
+lancedb
+datasets
+tqdm
+pandas
+faiss-cpu
+gradio
+sentence_transformers
+google-search-results
+chromadb 
+langchain 
+langchain-community 
+langchainhub 
+langchain-openai 
