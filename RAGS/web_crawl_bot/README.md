@@ -16,7 +16,6 @@ Instructions
         python run_prompt.py.
         ```
       You can specify a web link with -w option.
-
    3.2 To run the web interface.
        ```
        python rag_ui.py.
@@ -27,6 +26,13 @@ Model used:
 
 You can change the model used with the shell execution.
  ```> python run_prompt.py --model mistralai/Mistral-7B-Instruct-v0.2 ```
+
+Note
+-------------
+The default weblink used for scrapping is
+       '''
+        'https://www.pcmag.com/news/meteor-lake-first-tests-intel-core-ultra-7-benched-for-cpu-graphics-and'
+       '''
 
 Limitation:
 --------------------
