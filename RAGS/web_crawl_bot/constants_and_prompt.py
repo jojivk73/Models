@@ -22,7 +22,7 @@ search_str='https://www.pcmag.com/news/meteor-lake-first-tests-intel-core-ultra-
 default_link =search_str
 #question ='Generate a table of laptop performance comparisons that are in the doc'
 
-instr_prompt= 'Do the following instructions step by step.' + \
+instr_prompt='Do the following instructions step by step.' + \
 'Step 1. List the laptops/CPU mentioned in the document.' + \
 'Step 2. Get the performance number for each laptop/CPU:\n' + \
 ' Example : Cinebench R23 - Multi-core CPU Score   H   14476\n' + \
@@ -35,11 +35,16 @@ instr_prompt= 'Do the following instructions step by step.' + \
 'Grand Bench 6.2 - Multi-core	CPU	Score	H	123			111		10222		12223 \n' 
 
 
-instr_prompt_simple= 'Do the following instructions step by step.' + \
+instr_prompt_simple_2='Do the following instructions step by step.' + \
 'Step 1. Find all the laptops with specific processors mentioned.' + \
 'Step 2. Get the performance numbers for each laptop/processor for each benchmark :\n' + \
 'Step 3. For each laptop/processor compare its performance numbers with other laptops/processor in the document\n' + \
 'Step 4. Generate a table for each laptop/processor and their performance numbers compared to other laptops/processors.\n'
+
+instr_prompt_simple='Do the following instructions step by step.' + \
+'Step 1. Find all the laptops with specific processors mentioned.' + \
+'Step 2. List the performance numbers of each laptop/processor for each benchmark :\n' + \
+'Step 3. Generate a table for each laptop/processor and their performance numbers compared to other laptops/processors.\n'
 
 #' The table columns should have these headers : Benchmark, Type, Metric, H/L and each laptop name. \n'
 
